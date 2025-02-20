@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 20px;
+}
+
+.task-manager {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.task-input {
+  margin-bottom: 20px;
+}
+
+.task-input input,
+.task-input button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.task-input button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.task-input button:hover {
+  background-color: #45a049;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.task-item.completed {
+  background: #dff0d8;
+  border-color: #c3e6cb;
+}
+
+.task-item.completed .task-title,
+.task-item.completed .task-time {
+  color: #155724;
+  text-decoration: line-through;
+}
+
+.task-item.removed {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.task-item.delete {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+  text-decoration: line-through;
+}
+
+.task-item .task-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.task-item .task-time {
+  font-size: 14px;
+  color: #666;
+}
+
+.task-item .task-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.task-item button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-item button.complete-btn {
+  background-color: #4CAF50;
+}
+
+.task-item button.delete-btn {
+  background-color: #ff4d4d;
+}
+
+.task-item button:hover {
+  opacity: 0.9;
+}
